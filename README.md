@@ -48,7 +48,7 @@ This project consists of the following steps:
 In this project, we choose the accuracy metric to measure the performance of a model because it is often used in a classification problem and works well for the well-balanced dataset as ours. It simply measures how often the classifier correctly predicts. We can define it as the ratio of the number of correct predictions and the total number of predictions.
 
 <div style="text-align:center">
-<img src="static/metric.png" alt="drawing" width="300"/>
+<!-- <img src="static/metric.png" alt="drawing" width="300"/> -->
 </div>
 
 ## 1.4 Exploratory Data Analysis <a name='EDA'></a>
@@ -58,20 +58,20 @@ Dataset has 8351 total color dog images. We will split it into training, validat
 The training dataset contains a total of 6680 images of 133 dog breeds. The number of images for each one is well balanced from 26 to 77.
 
 <div style="text-align:center">
-<img src="static/EDA_train_dataset.PNG" alt="drawing" width="300"/>
+<!-- <img src="static/EDA_train_dataset.PNG" alt="drawing" width="300"/> -->
 <p><i>Figure: Number of images for each dog breed in the train dataset.</i></p>
 </div>
 
 The valid dataset contains total of 835 images of 133 dog breeds, the number images of each one are quite balanced from 4 to 9 images.
 
 <div style="text-align:center">
-<img src="static/EDA_valid_dataset.PNG" alt="drawing" width="300"/>
+<!-- <img src="static/EDA_valid_dataset.PNG" alt="drawing" width="300"/> -->
 <p><i>Figure: Number of images for each dog breed in the valid dataset.</i></p>
 </div>
 
 The test dataset contains a total of 835 images of 133 dog breeds, each one has from 3 to 10 images.
 <div style="text-align:center">
-<img src="static/EDA_test_dataset.PNG" alt="drawing" width="300"/>
+<!-- <img src="static/EDA_test_dataset.PNG" alt="drawing" width="300"/> -->
 <p><i>Figure: Number of images for each dog breed in the test dataset.</i></p>
 </div>
 
@@ -128,7 +128,7 @@ Next is the Flatten layer to flatten the array to a vector.
 Then, we use two dense layers to further elucidate the content of the image, preceded by drop layers to prevent overfitting. The final layer has 133 nodes, one entry for each dog breed in the dataset, and has a softmax activation function to convert the scores from the output into probability values.
 
 <div style="text-align:center">
-<img src="static/model_scratch.PNG" alt="drawing" width="400"/>
+<!-- <img src="static/model_scratch.PNG" alt="drawing" width="400"/> -->
 </div>
 
 3.2 CNN model using transfer learning: VGG16
@@ -136,7 +136,7 @@ Then, we use two dense layers to further elucidate the content of the image, pre
 The model uses the pre-trained VGG-16 model as a fixed feature extractor, where the last convolutional output of VGG-16 is fed as input to our model. We only add a global average pooling layer and a fully connected layer, where the latter contains one node for each dog category and is equipped with a softmax.
 
 <div style="text-align:center">
-<img src="static/model_VGG16.PNG" alt="drawing" width="400"/>
+<!-- <img src="static/model_VGG16.PNG" alt="drawing" width="400"/> -->
 </div>
 
 3.3 CNN model using transfer learning: InceptionV3
@@ -148,7 +148,7 @@ Next is the GlobalAveragePooling2D layer. That takes 4D tensor (output of pre-tr
 Finally, the Dense layer has a softmax activation function to convert the scores from the output into probability values, and 133 nodes, one node for each dog breed in the dataset.
 
 <div style="text-align:center">
-<img src="static/model_InceptionV3.PNG" alt="drawing" width="400"/>
+<!-- <img src="static/model_InceptionV3.PNG" alt="drawing" width="400"/> -->
 </div>
 
 
